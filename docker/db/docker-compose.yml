@@ -1,0 +1,12 @@
+# Database container for creating jooq code.
+version: '3'
+
+services:
+  university-database:
+    container_name: university-database
+    image: mysql:5.7
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
